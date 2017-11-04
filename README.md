@@ -25,6 +25,6 @@ your preferred java editor (e.g. eclipse, netbeans, javaeditor, ...)
 
 ## Authors
 
-* **Stefan Sloboda** - *Initial work*
+* **slobodastefan** - *Initial work*
 
 See also the list of [contributors](https://github.com/slobodastefan/oszimt/contributors) who participated in this project.
