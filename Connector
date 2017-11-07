@@ -1,0 +1,40 @@
+package DB;
+
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Connection;
+import java.sql.Statement;
+
+import javax.naming.spi.DirStateFactory.Result;
+
+public class MySQLConnect {
+	
+	public static void main(String[] args) {
+		
+		
+	
+		try {
+			String driver = "com.mysql.jdbc.Driver";
+			String url = "jdbc:mysql://localhost/immobilienmanagment";
+			String username ="root";
+			String password = "";
+			Class.forName(driver);
+
+			Connection conn = DriverManager.getConnection(url,username,password);
+			System.out.println("Connected");
+			
+			//Zum Testen der Vorname aus der Tabelle besitzer
+			String query = "SELECT * FROM besitzer";
+			Statement stmt = conn.createStatement();
+			ResultSet rs =stmt.executeQuery(query);
+			while(rs.next()) {
+				System.out.println("Name :"+rs.getString("Nachname"));
+			}
+			
+		} catch(Exception e) {System.err.println(e);}
+		
+		
+		
+	}
+	
+}
